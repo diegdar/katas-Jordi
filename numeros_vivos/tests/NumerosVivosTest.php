@@ -24,4 +24,9 @@ class NumerosVivosTest extends TestCase {
     public function testAlreadyOneReturnsZeroSteps() {
         $this->assertEquals(0, juego_numeros_vivos(1));
     }
+
+    public function testInfiniteLoopThrowsException(){
+        $this->expectException(InvalidArgumentException::class);
+        juego_numeros_vivos(3);// 3->6->3... (lanzará la excepción)
+    }
 }
