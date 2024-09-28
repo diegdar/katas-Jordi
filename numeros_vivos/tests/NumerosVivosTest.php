@@ -13,7 +13,7 @@ class NumerosVivosTest extends TestCase {
     }
 
     public function testNumberWithFiveThrowsExceptionOnZero() {
-        $this->expectException(InvalidArgumentException::class);juego_numeros_vivos(15);// 15 -> 10 -> 0 (lanzará la excepción)
+        $this->expectException(InvalidArgumentException::class);juego_numeros_vivos(15);// 15 -> 10 -> 5 -> 0   (lanzará la excepción)
     }
 
     public function testMixedRulesThrowsExceptionOnZero() {
