@@ -1,19 +1,21 @@
 <?php 
 declare(strict_types=1);
 
-require __DIR__ . '/../../numeros_vivos/index.php';
+require __DIR__ . '/../numeros_vivos/index.php';
 
 use PHPUnit\Framework\TestCase;
 
 
 class NumerosVivosTest extends TestCase {
+
     
     public function testEvenNumberIsDividedByTwo() {
         $this->assertEquals(1, juego_numeros_vivos(2));
     }
 
     public function testNumberWithFiveThrowsExceptionOnZero() {
-        $this->expectException(InvalidArgumentException::class);juego_numeros_vivos(15);// 15 -> 10 -> 5 -> 0   (lanzará la excepción)
+        $this->expectException(InvalidArgumentException::class);
+        juego_numeros_vivos(15);// 15 -> 10 -> 5 -> 0   (lanzará la excepción)
     }
 
     public function testMixedRulesThrowsExceptionOnZero() {
